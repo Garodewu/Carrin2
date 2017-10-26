@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<!-- saved from url=(0051)http://getbootstrap.com/docs/4.0/examples/navbars/# -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+    <title>ICOM</title>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.css" >
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" ></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" ></script>
+
+ <style>
+ a {
+ color:#31d231;}
+ 
+ .card {
+     border: 0;}
+	 
+
+
+.btn.btn-primary {
+    background-color: #0fd61e;
+	border-color:#0fd61e;
+	}
+	
+.breadcrumb {
+    background-color: white;
+    font-size: 0.9em;
+}
+
+footer {
+    background-color: gray;
+    border-top: 13px solid #22bd7e;
+}
+
+.tabla {
+width:100%; 
+border: 1px solid rgba(0,0,0,.1);
+}
+
+.tabla th,tr {
+border-bottom: 1px solid rgba(0,0,0,.1);
+padding: 12px 5px;
+}
+
+.tabla td{
+padding: 5px;
+}
+
+.tabla2 td{
+padding: 10px;
+}
+
+ </style>
+  
+  
+  </head>
+<script type="text/javascript">
+
+
+	function calcular(){
+	
+	var num1 = document.frm1.cantidad1.value;
+	var precio1 = document.frm1.precio1.value;
+	
+	var total1 = parseInt(num1)*parseInt(precio1);
+	//alert(total1);
+	document.getElementById('subtotal1').innerHTML='$' + total1;
+	document.getElementById('total1').innerHTML='$' + total1;
+	}
+	
+	//function calcularconi(){
+	//var num[i];
+	//var precio[i];
+	//for(i=1; i<2; i++){
+	//var num[i] = document.frm1.cantidad[i].value;
+	//var precio[i] = document.frm1.precio[i].value;
+	
+	//var total[i] = parseInt(num[i])*parseInt(precio[i]);
+	//alert(total[i]);
+	//document.getElementById('subtotal[i]').innerHTML='$' + total[i];
+	//document.getElementById('total[i]').innerHTML='$' + total[i];
+	//}
+	//}
+	
+	</script>
+  <body onload="calcular();">
+
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Iniciar Sesión</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+	  
+<form class="form-signin">
+<div class="modal-body">
+        <h2 class="form-signin-heading"></h2>
+        <label for="inputEmail" class="sr-only">Usuario</label>
+        <input type="email" id="inputEmail" class="form-control" placeholder="Nombre o correo" required="" autofocus="" style="margin-bottom: 5px;">
+        <label for="inputPassword" class="sr-only">Contraseña</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required="" style="margin-bottom: 5px;">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="remember-me"> Recordarme
+          </label>
+        </div>
+</div>
+<div class="modal-footer">
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Iniciar Sesión</button>
+     </div>	
+      </form>
+  
+	  
+     
+    </div>
+  </div>
+</div>
+
+
+
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="#"><img src="imgs/logoicom.jpg" class="img-fluid" style="width:20%"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExample07">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item ">
+              <a class="nav-link" href="index.html">Inicio<span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="catalogo.html">Catálogo<span class="sr-only"></span></a>
+            </li>
+			
+			<li class="nav-item ">
+              <a class="nav-link" href="carro.html">Carro<span class="sr-only"></span></a>
+            </li>
+
+			<li class="nav-item ">
+              <a class="nav-link" href="#"><span class="sr-only"></span></a>
+            </li>
+
+			 <li class="nav-item ">
+              <a class="nav-link" data-toggle="modal" data-target="#exampleModal" href="#">Login<span class="sr-only"></span></a>
+            </li>
+            <!--li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="http://example.com/" id="dropdown07" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown07">
+                <a class="dropdown-item" href="http://getbootstrap.com/docs/4.0/examples/navbars/#">Action</a>
+                <a class="dropdown-item" href="http://getbootstrap.com/docs/4.0/examples/navbars/#">Another action</a>
+                <a class="dropdown-item" href="http://getbootstrap.com/docs/4.0/examples/navbars/#">Something else here</a>
+              </div>
+            </li-->
+          </ul>
+          <form class="form-inline my-2 my-md-0">
+            <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+          </form>
+        </div>
+      </div>
+    </nav>
+
+
+
+    <div class="container">
+<form name="frm1">
+
+	<div class="row">
+	
+	<div class="col-lg-12">
+	<nav aria-label="breadcrumb" role="navigation">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Home</a></li>
+    <li class="breadcrumb-item"><a href="#">Catálogo</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Producto</li>
+  </ol>
+</nav>
+</div>
+	</div>
+	
+	<div class="row">
+	
+	<div class="col-lg-12">
+	
+
+<table class="tabla" cellspacing="0" >
+			<thead>
+				<tr>
+					<th class="product-remove">&nbsp;</th>
+					<th class="product-thumbnail">&nbsp;</th>
+					<th class="product-name">Producto</th>
+					<th class="product-price">Precio</th>
+					<th class="product-quantity">Cantidad</th>
+					<th class="product-subtotal">Total</th>
+				</tr>
+			</thead>
+			<tbody>
+				
+			<tr class="" >
+
+				<td class="product-remove">
+					<a href="#" class="remove" aria-label="Remover"  >Remover</a>
+				</td>
+
+				<td class="product-thumbnail">
+					<a href="#"><img width="120" height="120" src="imgs/prod1.jpg" class="" alt="producto"></a>							
+				</td>
+
+				<td class="product-name" data-title="Product">
+					<a href="">Producto</a>							
+				</td>
+
+				<td class="product-price" data-title="Price">
+					<div id="precio">25</div>	<input type="hidden" id="precio1" value="25">					
+				</td>
+
+				<td class="product-quantity" data-title="Quantity">				
+					<input type="number" id="cantidad1" class="input-text input-field qty text" min="1" max="" name="cantidad1" value="1" title="cantidad1" size="4"  inputmode="numeric" onchange="calcular();">
+				</td>
+
+				<td class="product-subtotal">
+					<div id="subtotal1"></div>								
+				</td>
+				</tr>
+				
+			<tr class="" >
+
+				<td class="product-remove">
+					<a href="#" class="remove" aria-label="Remover"  >Remover</a>
+				</td>
+
+				<td class="product-thumbnail">
+					<a href="#"><img width="120" height="120" src="imgs/prod2.jpg" class="" alt="producto"></a>							
+				</td>
+
+				<td class="product-name" data-title="Product">
+					<a href="">Producto 2</a>							
+				</td>
+
+				<td class="product-price" data-title="Price">
+					<div id="precio">36</div>	<input type="hidden" id="precio2" value="36">					
+				</td>
+
+				<td class="product-quantity" data-title="Quantity">				
+					<input type="number" id="cantidad2" class="input-text input-field qty text" min="1" max="" name="cantidad2" value="1" title="cantidad2" size="4"  inputmode="numeric" /*onchange="calcular();"*/>
+				</td>
+
+				<td class="product-subtotal">
+					<div id="subtotal2"></div>								
+				</td>
+				</tr>
+						
+
+				<tr>
+				<td colspan="6" class="" style="text-align:right">
+
+					<!--div style="float:left">
+					<label for="coupon_code">Coupon:</label> 
+					<input type="text" name="coupon_code" class="input-text input-field" id="coupon_code" value="" placeholder="Coupon code"> <input type="submit" class="sbutton sbutton-default" name="apply_coupon" value="Apply coupon">
+					</div-->
+						
+					<!--input type="submit" class="btn btn-primary" name="update_cart" value="Update cart" disabled=""-->
+
+					</td>
+				</tr>
+
+							</tbody>
+		</table>
+
+	</div>
+	
+	</div>
+	
+	<div class="row" style="margin-top:40px">
+	
+	<div class="col-lg-6">
+	<div style="
+				border: 1px solid #e5e5e5;
+				padding: 20px;">
+	<h4>Seleccionar Dirección</h4>
+	<br>
+		<select class="form-control">
+		<option>--------</option>
+		<option>Dirección 1</option>
+		<option>Dirección 2</option>
+		</select>
+	</div>
+	</div>
+	
+	<div class="col-lg-6">
+	<div style="/*border: 1px solid #e5e5e5;
+				padding: 20px;*/">
+	<h4>Precio Total</h4>
+	<br>
+
+<table class="tabla tabla2" cellspacing="0" style="width:100%" >
+<tr>
+<td><b>Subtotal:</b></td>
+<td><div id="total1"></div></td>
+</tr>
+<tr>
+<td><b>Total:</b></td>
+<td>$24.99</td>
+</tr>
+</table>
+
+<br>
+<a class="btn btn-primary" href="#" role="button" style="width:100%">Comprar</a>
+	</div>
+	</div>
+	
+	
+
+		</div>
+		
+		
+</form>
+    </div>
+	
+
+	<footer class="py-5" style="background-color: gray; margin-top:50px">
+      <div class="container">
+	  <div class="row">
+	  <div class="col-lg-4">
+	  <img src="imgs/logoicom.png" class="img-fluid"><br>
+      </div>
+	  <div class="col-lg-4">
+        <p class="m-0 text-center text-white">Derechos reservados ©ICOM Grupo 5 2017</p>
+      </div>
+	  <div class="col-lg-4">
+  
+      </div>
+	  </div>
+	  </div>
+    </footer>
+
+
+  
+
+</body></html>
